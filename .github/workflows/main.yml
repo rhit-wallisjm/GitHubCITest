@@ -18,7 +18,7 @@ jobs:
           cache: 'npm'
           cache-dependency-path: SeniorProjectApp/package-lock.json
       - name: npm install
-        run: npm ci
+        run: npm install
       - name: Tests
         run: npm test
 
