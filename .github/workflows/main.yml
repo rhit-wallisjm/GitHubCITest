@@ -11,10 +11,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: use Node.js
-        uses: actions/setup-node@v1
       - name: change directory
         run: cd ./SeniorProjectApp
+      - name: use Node.js
+        uses: actions/setup-node@v1
       - name: npm install
         run: npm ci
       - name: Tests
