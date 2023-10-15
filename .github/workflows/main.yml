@@ -14,6 +14,7 @@ jobs:
       - name: use Node.js
         uses: actions/setup-node@v2
         with: 
+          node-version: '18'
           cache: 'npm'
           cache-dependency-path: SeniorProjectApp/package-lock.json
       - name: npm install
