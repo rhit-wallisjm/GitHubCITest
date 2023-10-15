@@ -11,10 +11,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: change directory
-        run: cd ./SeniorProjectApp
       - name: use Node.js
-        uses: actions/setup-node@v1
+        uses: actions/setup-node@v2
+        with: 
+          cache: 'npm'
+          cache-dependency-path: SeniorProjectApp/package-lock.json
       - name: npm install
         run: npm ci
       - name: Tests
